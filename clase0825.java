@@ -100,22 +100,22 @@
 
 // #########################################################################################################
 
-public class clase2508{
-    public static void main(String[] args) {
-        char[][] tablero = new char[8][8];
+// public class clase2508{
+//     public static void main(String[] args) {
+//         char[][] tablero = new char[8][8];
 
-        int filas = tablero.length;
-        int columnas = tablero[0].length;
-        for(int x = 0; x < filas; x++) {
-            for(int u = 0; u < columnas; u++) {
-                if ( (x + u) % 2 == 0) {
-                    System.out.print("# ");
-                } else {
-                    System.out.print("  ");
-                }
-            }
-            System.out.println("");
-        }
-    }
-}
+//         int filas = tablero.length;
+//         int columnas = tablero[0].length;
+//         for(int x = 0; x < filas; x++) {
+//             for(int u = 0; u < columnas; u++) {
+//                 if ( (x + u) % 2 == 0) {
+//                     System.out.print("# ");
+//                 } else {
+//                     System.out.print("  ");
+//                 }
+//             }
+//             System.out.println("");
+//         }
+//     }
+// }
 

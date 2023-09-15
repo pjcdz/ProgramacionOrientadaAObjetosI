@@ -65,16 +65,16 @@
 
 // ##################################################################################################################
 
-public class clase1808 {
-    public static void main(String[] args) {
-        // for (int x = 5; x <= 40; x+=5) {
-        //     System.out.println(x);
-        // }
+// public class clase1808 {
+//     public static void main(String[] args) {
+//         // for (int x = 5; x <= 40; x+=5) {
+//         //     System.out.println(x);
+//         // }
 
-        int x = 5;
-        while (x <= 50) {
-            System.out.println(x);
-            x+=5;
-        }
-    }
-}
+//         int x = 5;
+//         while (x <= 50) {
+//             System.out.println(x);
+//             x+=5;
+//         }
+//     }
+// }
