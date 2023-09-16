@@ -48,29 +48,47 @@
 
 // ########################################################################################################################
 
+import java.util.Scanner;
+
 public class clase0915 {
     public static void main(String args[]) {
-        CuentaBancaria cuentaBancaria = new CuentaBancaria("Pablo Cardozo", 100);
+        // CuentaBancaria cuentaBancaria = new CuentaBancaria("Pablo Cardozo", 100);
 
-        System.out.println("Info: ");
-        System.out.println(cuentaBancaria.getTitular());
-        System.out.println(cuentaBancaria.getSaldo());
+        // System.out.println("Info: ");
+        // System.out.println(cuentaBancaria.getTitular());
+        // System.out.println(cuentaBancaria.getSaldo());
 
-        System.out.println("Ingreso de 300");
-        cuentaBancaria.depositar(300);
+        // System.out.println("Ingreso de 300");
+        // cuentaBancaria.depositar(300);
 
-        System.out.println("Info: ");
-        System.out.println(cuentaBancaria.getTitular());
-        System.out.println(cuentaBancaria.getSaldo());
+        // System.out.println("Info: ");
+        // System.out.println(cuentaBancaria.getTitular());
+        // System.out.println(cuentaBancaria.getSaldo());
 
-        System.out.println("Retiro de 100");
-        cuentaBancaria.retirar(100);
+        // System.out.println("Retiro de 100");
+        // cuentaBancaria.retirar(100);
 
-        System.out.println("Info: ");
-        System.out.println(cuentaBancaria.getTitular());
-        System.out.println(cuentaBancaria.getSaldo());
+        // System.out.println("Info: ");
+        // System.out.println(cuentaBancaria.getTitular());
+        // System.out.println(cuentaBancaria.getSaldo());
+
+        
 
 
+    }
+}
+
+class Banco {
+    CuentaBancaria cuenta1 = new CuentaBancaria("Pablo", 100);
+    CuentaBancaria cuenta2 = new CuentaBancaria("Sol", 1000);
+    Scanner scanner = new Scanner(System.in);
+
+    String titularOrigen = scanner.nextLine();
+    String titularDestino = scanner.nextLine();
+
+    void realizarTransferencia(double cantidad, String cuentaDestino) {
+        cuenta1.saldo -= cantidad;
+        cuenta2.saldo += cantidad;
     }
 }
 
