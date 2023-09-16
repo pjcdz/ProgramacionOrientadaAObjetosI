@@ -72,23 +72,28 @@ public class clase0915 {
         // System.out.println(cuentaBancaria.getTitular());
         // System.out.println(cuentaBancaria.getSaldo());
 
-        
+        CuentaBancaria cuenta1 = new CuentaBancaria("Pablo", 100);
+        CuentaBancaria cuenta2 = new CuentaBancaria("Sol", 1000);
+        Banco banco = new Banco();
 
+        System.out.println("--------  Info: --------  ");   
+        System.out.println(cuenta1.getSaldo());
+        System.out.println(cuenta2.getSaldo());
+
+        // cuenta2.realizarTransferencia(100, cuenta1);
+        banco.realizarTransferencia(100, cuenta2, cuenta1);
+
+        System.out.println("--------  Info: --------  ");   
+        System.out.println(cuenta1.getSaldo());
+        System.out.println(cuenta2.getSaldo());
 
     }
 }
 
 class Banco {
-    CuentaBancaria cuenta1 = new CuentaBancaria("Pablo", 100);
-    CuentaBancaria cuenta2 = new CuentaBancaria("Sol", 1000);
-    Scanner scanner = new Scanner(System.in);
-
-    String titularOrigen = scanner.nextLine();
-    String titularDestino = scanner.nextLine();
-
-    void realizarTransferencia(double cantidad, String cuentaDestino) {
-        cuenta1.saldo -= cantidad;
-        cuenta2.saldo += cantidad;
+    void realizarTransferencia(double cantidad, CuentaBancaria cuentaOrigen, CuentaBancaria cuentaDestino) {
+        cuentaOrigen.retirar(cantidad);
+        cuentaDestino.depositar(cantidad);
     }
 }
 
@@ -116,4 +121,17 @@ class CuentaBancaria {
     void retirar(double cantidad) {
         saldo -= cantidad;
     }
+
+    // void depositar(double cantidad, CuentaBancaria cuenta) {
+    //     cuenta.saldo += cantidad;
+    // }
+
+    // void retirar(double cantidad, CuentaBancaria cuenta) {
+    //     cuenta.saldo -= cantidad;
+    // }
+
+    // void realizarTransferencia(double cantidad, CuentaBancaria cuentaDestino) {
+    //     retirar(cantidad, this);
+    //     depositar(cantidad, cuentaDestino);
+    // }
 }

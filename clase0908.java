@@ -48,34 +48,62 @@ public class clase0908{
         Random random = new Random();
 
         boolean incluirMayusculas = true;
-        boolean incluirMinusculas = true;
-        boolean incluirDigitos = true;
+        boolean incluirMinusculas = false;
+        boolean incluirDigitos = false;
 
-        System.out.print("Ingresa la longitud: ");
-        int longitud = scanner.nextInt();
+        // System.out.print("Ingresa la longitud: ");
+        // int longitud = scanner.nextInt();
+        int longitud = 10;
         int count = 0;
 
+        // System.out.print("Incluir Mayuscular? true/false: ");
+        // boolean incluirMayusculas = scanner.nextBoolean();
+        // System.out.print("Incluir Minusculas? true/false: ");
+        // boolean incluirMinusculas = scanner.nextBoolean();
+        // System.out.print("Incluir Digitos? true/false: ");
+        // boolean incluirDigitos = scanner.nextBoolean();
+
+        String sig = "";
+
+        if (incluirMayusculas) {
+            sig += "0";
+        } 
+        if (incluirMinusculas) {
+            sig += "1";
+        }
+        if (incluirDigitos) {
+            sig += "2";
+        }
+        if (!incluirMayusculas && !incluirMinusculas && !incluirDigitos) {
+            sig += "2";
+        }
+
+        // for (int x = 0; x < sig.length(); x++) {
+        //     System.out.print(sig.charAt(x));
+        // }
+
+        // System.out.println("-- " + sig.length());
+        // int sigRandom = random.nextInt(sig.length());
+        // System.out.println(sigRandom);
+
         while (count <= longitud) {
-            int sigRandom = random.nextInt(3);
+            int sigCharAt = random.nextInt(sig.length());
+            char sigRandomChar = sig.charAt(sigCharAt);
+            int sigRandom = Character.getNumericValue(sigRandomChar);
+            // System.out.println(sigRandom);
 
             if (sigRandom == 0) {
-                if (incluirMayusculas) {
-                    String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVW";
-                    int indiceRandom = random.nextInt(mayusculas.length());
-                    System.out.print(mayusculas.charAt(indiceRandom));
-                }
+                String mayusculas = "ABCDEFGHIJKLMNOPQRSTUVW";
+                int indiceRandom = random.nextInt(mayusculas.length());
+                System.out.print(mayusculas.charAt(indiceRandom));
             } else if (sigRandom == 1) {
-                if (incluirMinusculas) {
-                    String minusculas = "abcdefghijklmnopqrstuvwxyz";
-                    int indiceRandom = random.nextInt(minusculas.length());
-                    System.out.print(minusculas.charAt(indiceRandom));
-                }
+                String minusculas = "abcdefghijklmnopqrstuvwxyz";
+                int indiceRandom = random.nextInt(minusculas.length());
+                System.out.print(minusculas.charAt(indiceRandom));
             } else if (sigRandom == 2) {
-                if (incluirDigitos) {
-                    String digitos = "123456789";
-                    int indiceRandom = random.nextInt(digitos.length());
-                    System.out.print(digitos.charAt(indiceRandom));
-                }
+                String digitos = "123456789";
+                int indiceRandom = random.nextInt(digitos.length());
+                System.out.print(digitos.charAt(indiceRandom));
             }
 
             count++;
