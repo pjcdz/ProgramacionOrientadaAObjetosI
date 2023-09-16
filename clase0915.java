@@ -80,8 +80,8 @@ public class clase0915 {
         System.out.println(cuenta1.getSaldo());
         System.out.println(cuenta2.getSaldo());
 
-        // cuenta2.realizarTransferencia(100, cuenta1);
-        banco.realizarTransferencia(100, cuenta2, cuenta1);
+        // cuenta2.realizarTransferencia(100, cuenta1); // forma 1
+        banco.realizarTransferencia(100, cuenta2, cuenta1); // forma 2
 
         System.out.println("--------  Info: --------  ");   
         System.out.println(cuenta1.getSaldo());
