@@ -1,3 +1,5 @@
+package c0929parcialito;
+
 public class parcialito0929 {
     public static void main(String args[]) {
         Casa casa = new Casa("Pablo", "Ind 321", 100, 3, false, 2, 2, false);

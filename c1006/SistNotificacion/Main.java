@@ -9,6 +9,9 @@ public class Main {
 
         SMS sms = new SMS();
         sms.enviarNotificacion();
+
+        PushNotification pushNotification = new PushNotification();
+        pushNotification.enviarNotificacion();
     }
 }
 
