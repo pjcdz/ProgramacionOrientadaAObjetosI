@@ -138,56 +138,56 @@
 
 // ########################################################################################################################
 
-public class clase0915 {
-    public static void main(String args[]) {
-        // System.out.println("asd");
-        // Vehiculo vehiculo = new Vehiculo("Toyota", "Prius");
-        // vehiculo.acelerar();
-        // vehiculo.frenar();
-        Auto auto = new Auto("Toyota", "Prius", "Cuero");
-        auto.acelerar();
-        auto.frenar();
-    }
-}
+// public class clase0915 {
+//     public static void main(String args[]) {
+//         // System.out.println("asd");
+//         // Vehiculo vehiculo = new Vehiculo("Toyota", "Prius");
+//         // vehiculo.acelerar();
+//         // vehiculo.frenar();
+//         Auto auto = new Auto("Toyota", "Prius", "Cuero");
+//         auto.acelerar();
+//         auto.frenar();
+//     }
+// }
 
-class Vehiculo {
-    String marca;
-    String modelo;
-    boolean enMovimiento = false;
+// class Vehiculo {
+//     String marca;
+//     String modelo;
+//     boolean enMovimiento = false;
 
-    Vehiculo(String marca, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
-    }
+//     Vehiculo(String marca, String modelo) {
+//         this.marca = marca;
+//         this.modelo = modelo;
+//     }
 
-    void acelerar() {
-        enMovimiento = true;
-        System.out.println("El vehiculo esta en marcha: " + enMovimiento);
-    }
+//     void acelerar() {
+//         enMovimiento = true;
+//         System.out.println("El vehiculo esta en marcha: " + enMovimiento);
+//     }
 
-    void frenar() {
-        if (enMovimiento) {
-            enMovimiento = false;
-            System.out.println("El vehiculo esta en marcha: " + enMovimiento);
-        }
-    }
-}
+//     void frenar() {
+//         if (enMovimiento) {
+//             enMovimiento = false;
+//             System.out.println("El vehiculo esta en marcha: " + enMovimiento);
+//         }
+//     }
+// }
 
-class Auto extends Vehiculo {
-    String materialAsientos;
+// class Auto extends Vehiculo {
+//     String materialAsientos;
 
-    Auto(String marca, String modelo, String materialAsientos) {
-        super(marca, modelo);
-        this.materialAsientos = materialAsientos;
-    }
+//     Auto(String marca, String modelo, String materialAsientos) {
+//         super(marca, modelo);
+//         this.materialAsientos = materialAsientos;
+//     }
 
-    void acelerar() {
-        System.out.print("Auto: Se saca el freno de mano y aprieta el acelerador con el pie. ");
-        super.acelerar();
-    }
+//     void acelerar() {
+//         System.out.print("Auto: Se saca el freno de mano y aprieta el acelerador con el pie. ");
+//         super.acelerar();
+//     }
 
-    void frenar() {
-        System.out.print("Auto: Se aprieta el freno con el pie y se coloca el freno de mano. ");
-        super.frenar();
-    }
-}
+//     void frenar() {
+//         System.out.print("Auto: Se aprieta el freno con el pie y se coloca el freno de mano. ");
+//         super.frenar();
+//     }
+// }

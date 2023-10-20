@@ -58,49 +58,49 @@
 
 // ######################################################################################################################################
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class clase0901{
-    public static void main(String[] args) {
-        System.out.println("Registro de alumnos");
+// public class clase0901{
+//     public static void main(String[] args) {
+//         System.out.println("Registro de alumnos");
 
-        Scanner scanner = new Scanner(System.in);
-        String nombre = ".";
-        do {
-            boolean nombreValido = false;
+//         Scanner scanner = new Scanner(System.in);
+//         String nombre = ".";
+//         do {
+//             boolean nombreValido = false;
 
-            do {
-                try {
-                    System.out.print("Nombre: ");
-                    nombre = scanner.nextLine();
+//             do {
+//                 try {
+//                     System.out.print("Nombre: ");
+//                     nombre = scanner.nextLine();
 
-                    if (nombre.isEmpty()) {
-                        throw new IllegalArgumentException("No puede ser un nombre vacio");
-                    } else if (!nombre.matches("[a-zA-Z]+")) {
-                        throw new IllegalArgumentException("El nombre debe contener unicamente letras");
-                    } else {
-                        nombreValido = true;
-                    }
-                } catch(IllegalArgumentException e1) {
-                    System.out.println(e1.getMessage());
-                }
-            } while (!nombreValido);
+//                     if (nombre.isEmpty()) {
+//                         throw new IllegalArgumentException("No puede ser un nombre vacio");
+//                     } else if (!nombre.matches("[a-zA-Z]+")) {
+//                         throw new IllegalArgumentException("El nombre debe contener unicamente letras");
+//                     } else {
+//                         nombreValido = true;
+//                     }
+//                 } catch(IllegalArgumentException e1) {
+//                     System.out.println(e1.getMessage());
+//                 }
+//             } while (!nombreValido);
             
-            if ( !nombre.equals("salir") ) {
-                boolean edadValida = false;
+//             if ( !nombre.equals("salir") ) {
+//                 boolean edadValida = false;
 
-                do {
-                    try {
-                        System.out.print("Edad: ");
-                        int edad = scanner.nextInt();
-                        edadValida = true;
-                        scanner.nextLine();
-                    } catch (java.util.InputMismatchException e2) {
-                        System.out.println("Ingrese una edad que sea un numero");
-                        scanner.nextLine();
-                    }
-                } while (!edadValida);
-            }
-        } while (!nombre.equals("salir"));
-    }
-}
+//                 do {
+//                     try {
+//                         System.out.print("Edad: ");
+//                         int edad = scanner.nextInt();
+//                         edadValida = true;
+//                         scanner.nextLine();
+//                     } catch (java.util.InputMismatchException e2) {
+//                         System.out.println("Ingrese una edad que sea un numero");
+//                         scanner.nextLine();
+//                     }
+//                 } while (!edadValida);
+//             }
+//         } while (!nombre.equals("salir"));
+//     }
+// }

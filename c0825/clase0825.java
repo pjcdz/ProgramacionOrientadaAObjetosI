@@ -100,7 +100,7 @@
 
 // #########################################################################################################
 
-// public class clase2508{
+// public class clase0825{
 //     public static void main(String[] args) {
 //         char[][] tablero = new char[8][8];
 
@@ -114,7 +114,7 @@
 //                     System.out.print("  ");
 //                 }
 //             }
-//             System.out.println("");
+//             // // System.out.println("");
 //         }
 //     }
 // }
