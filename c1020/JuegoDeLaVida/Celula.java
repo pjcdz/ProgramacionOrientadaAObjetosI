@@ -1,4 +1,4 @@
-package c1020;
+package c1020.JuegoDeLaVida;
 
 public class Celula {
     private boolean viva = false;
@@ -9,17 +9,20 @@ public class Celula {
         this.posicion = posicion;
     }
 
-    public void nacer() {
+    // public void evolucionar() {
+    //     if ( viva )
+    // }
+    // public void nacer() {
 
-    }
+    // }
 
-    public void morir() {
+    // public void morir() {
 
-    }
+    // }
 
-    public void sobrevivir() {
+    // public void sobrevivir() {
 
-    }
+    // }
 
     public boolean vive() {
         boolean res = false;
@@ -28,7 +31,7 @@ public class Celula {
         } return res;
     }
 
-    public void getVecinos() {
-        if ()
+    public void setViva(boolean viva) {
+        this.viva = viva;
     }
 }

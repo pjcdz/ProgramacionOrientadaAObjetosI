@@ -1,8 +1,8 @@
-package c1020;
+package c1020.JuegoDeLaVida;
 
 public class Tablero {
     int tamanio = 0;
-    Celula[][] mundo = {{}};
+    Celula[][] mundo = null;
 
     public Tablero(int tamanio) {
         this.tamanio = tamanio;
@@ -10,10 +10,9 @@ public class Tablero {
     }
 
     public void imprimir() {
-        System.out.println("a ");
         for(int x = 0; x < tamanio; x++) {
             for(int u = 0; u < tamanio; u++) {
-                if ( this.mundo[x][u].vive() ) {
+                if ( mundo[x][u].vive() ) {
                     System.out.print("+ ");
                 } else {
                     System.out.print("- ");
@@ -33,5 +32,15 @@ public class Tablero {
                 mundo[x][u] = celula;
             }
         }
+
+        mundo[0][1].setViva(true);
+        mundo[0][5].setViva(true);
+        mundo[1][1].setViva(true);
+        mundo[1][2].setViva(true);
+        mundo[3][0].setViva(true);
+        mundo[3][3].setViva(true);
+        mundo[4][1].setViva(true);
+        mundo[4][4].setViva(true);
+        mundo[5][1].setViva(true);
     }
 }
