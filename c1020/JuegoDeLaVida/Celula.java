@@ -3,7 +3,7 @@ package c1020.JuegoDeLaVida;
 public class Celula {
     private boolean viva = false;
     private int[] posicion;
-    private int vecinos;
+    // private int vecinos;
 
     public Celula(int[] posicion) {
         this.posicion = posicion;
