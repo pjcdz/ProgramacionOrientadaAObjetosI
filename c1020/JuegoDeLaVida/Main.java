@@ -13,7 +13,12 @@ public class Main {
         partida.imprimir();
         partida.evolucionar();
 
-        System.out.println("---------------");
+        System.out.println("-------------");
+
+        partida.imprimir();
+        partida.evolucionar();
+
+        System.out.println("-------------");
 
         partida.imprimir();
 

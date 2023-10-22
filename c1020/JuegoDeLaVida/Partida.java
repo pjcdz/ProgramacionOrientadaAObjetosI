@@ -10,7 +10,7 @@ public class Partida extends Tablero {
 
     public Partida(int tamanio) {
         super(tamanio);
-        this.vecinos = new Celula[tamanio][tamanio][4];
+        this.vecinos = new Celula[tamanio][tamanio][8];
     }
 
     void evolucionar() {
@@ -57,6 +57,18 @@ void contarVecinosVivos() {
             if ( vecinos[x][u][3].vive() ) {
                 contador++;
             }
+            if ( vecinos[x][u][4].vive() ) {
+                contador++;
+            }
+            if ( vecinos[x][u][5].vive() ) {
+                contador++;
+            }
+            if ( vecinos[x][u][6].vive() ) {
+                contador++;
+            }
+            if ( vecinos[x][u][7].vive() ) {
+                contador++;
+            }
             vecinosVivos[x][u] = contador;
             // System.out.println(contador);
         }
@@ -67,19 +79,19 @@ void contarVecinosVivos() {
         for(int x = 0; x < tamanio; x++) {
             for(int u = 0; u < tamanio; u++) {
                 try {
-                    vecinos[x][u][0] = mundo[x-1][u];    
+                    vecinos[x][u][0] = mundo[x-1][u-1];    
                 } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
                     vecinos[x][u][0] = celulaNull;
                 }
 
                 try {
-                    vecinos[x][u][1] = mundo[x+1][u];    
+                    vecinos[x][u][1] = mundo[x-1][u];    
                 } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
                     vecinos[x][u][1] = celulaNull;
                 }
 
                 try {
-                    vecinos[x][u][2] = mundo[x][u+1];    
+                    vecinos[x][u][2] = mundo[x-1][u+1];    
                 } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
                     vecinos[x][u][2] = celulaNull;
                 }
@@ -88,6 +100,30 @@ void contarVecinosVivos() {
                     vecinos[x][u][3] = mundo[x][u-1];    
                 } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
                     vecinos[x][u][3] = celulaNull;
+                }
+
+                try {
+                    vecinos[x][u][4] = mundo[x][u+1];    
+                } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
+                    vecinos[x][u][4] = celulaNull;
+                }
+
+                try {
+                    vecinos[x][u][5] = mundo[x+1][u-1];    
+                } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
+                    vecinos[x][u][5] = celulaNull;
+                }
+
+                try {
+                    vecinos[x][u][6] = mundo[x+1][u];    
+                } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
+                    vecinos[x][u][6] = celulaNull;
+                }
+
+                try {
+                    vecinos[x][u][7] = mundo[x+1][u+1];    
+                } catch (java.lang.ArrayIndexOutOfBoundsException e1) {
+                    vecinos[x][u][7] = celulaNull;
                 }
 
                     // vecinos[x][u][0] = mundo[x-1][u];
