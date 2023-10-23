@@ -1,4 +1,4 @@
-package c1020.JuegoDeLaVida;
+package c1020.GameOfLifeV1;
 
 public class Celula {
     private boolean viva = false;

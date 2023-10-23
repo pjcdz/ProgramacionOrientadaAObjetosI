@@ -1,4 +1,4 @@
-package c1020.JuegoDeLaVida;
+package c1020.GameOfLifeV1;
 
 public class Partida extends Tablero {
     Celula[][][] vecinos = null;
@@ -28,6 +28,7 @@ public class Partida extends Tablero {
 
         for(int x = 0; x < tamanio; x++) {
             for(int u = 0; u < tamanio; u++) {
+                // System.out.println(vecinosVivos[x][u]);
                 if ( mundo[x][u].vive() ) {
                     if ( vecinosVivos[x][u] < 2 || vecinosVivos[x][u] > 3 ) {
                         mundo[x][u].setViva(false);

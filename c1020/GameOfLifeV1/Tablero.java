@@ -1,4 +1,4 @@
-package c1020.JuegoDeLaVida;
+package c1020.GameOfLifeV1;
 
 public class Tablero {
     int tamanio = 0;
