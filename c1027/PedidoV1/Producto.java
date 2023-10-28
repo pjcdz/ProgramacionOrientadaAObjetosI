@@ -1,4 +1,4 @@
-package c1027;
+package c1027.PedidoV1;
 
 public class Producto implements Descuentable {
     String nombre;

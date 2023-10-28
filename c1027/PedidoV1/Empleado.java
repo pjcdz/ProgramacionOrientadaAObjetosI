@@ -1,4 +1,4 @@
-package c1027;
+package c1027.PedidoV1;
 
 public class Empleado extends Usuario {
     String puesto;
