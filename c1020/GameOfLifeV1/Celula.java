@@ -9,6 +9,10 @@ public class Celula {
         this.posicion = posicion;
     }
 
+    public int[] getPosicion() {
+        return posicion;
+    }
+
     // public void evolucionar() {
     //     if ( viva )
     // }
