@@ -1,4 +1,4 @@
-package EjercicioSimple.Ej01;
+package c1030.EjercicioSimple.Ej01;
 
 public class Perro extends Animal implements Mascota {
 

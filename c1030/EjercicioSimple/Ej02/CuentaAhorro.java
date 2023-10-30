@@ -1,4 +1,4 @@
-package EjercicioSimple.Ej02;
+package c1030.EjercicioSimple.Ej02;
 
 public class CuentaAhorro extends CuentaBancaria {
 
