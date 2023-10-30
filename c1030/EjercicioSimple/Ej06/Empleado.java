@@ -18,6 +18,6 @@ public class Empleado {
     }
 
     public void getSalarioAnual() {
-        System.out.print( getSalario() * 12 );
+        System.out.println( getSalario() * 12 );
     } 
 }
